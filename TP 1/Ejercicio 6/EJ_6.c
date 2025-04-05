@@ -205,7 +205,7 @@ int main()
     while (esValido == false)
     {
         esValido2 = true;
-        printf("Ingrese una palabra u oracion (X para salir): ");
+        printf("Ingrese L (low) o H (High) para graficar una onda digital (X para salir): ");
         gets(senial);
         longitud = strlen(senial);
 
