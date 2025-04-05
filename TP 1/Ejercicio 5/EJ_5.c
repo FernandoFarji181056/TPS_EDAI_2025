@@ -184,7 +184,7 @@ void SeparadorMiles(char* numero, int longitud, char* resultado, int n)
         if (flag > 3) //Cada 3 numeros pone una coma
         { 
             //Si se contaron 3 numeros agrego la coma
-            resultado[n] = ',';
+            resultado[n] = '.';
             flag = 1;
             return SeparadorMiles(numero, longitud,resultado,n+1);
 
