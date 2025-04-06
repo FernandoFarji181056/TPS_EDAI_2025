@@ -176,9 +176,7 @@ bool palindromo(char *cadena) {
         //Sale del programa
         if ((palabra[0] == 88  || palabra[0] == 120) && longitud == 1){ 
             printf("Gracias, vuelva cuando quiera.\n");
-            system("pause");
-            
-            
+            system("pause");           
             break;}
 
 //   Uso la funcion "validarLetras" para ver que solo se hayan ingresados
