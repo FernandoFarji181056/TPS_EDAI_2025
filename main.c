@@ -82,6 +82,7 @@ int main(){
     do {
         menu();
         printf("Seleccione un ejercicio: ");
+        while (getchar() != '\n'); 
         scanf("%d", &opcion);
 		
         if (opcion >= 1 && opcion <= 9){
