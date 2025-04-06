@@ -36,10 +36,6 @@ void submenu(int opcion){
              int longitud2 = strlen(frase);             
              frase[longitud2-1]='\0'; //quita el espacio que pone fgets al final del string
              longitud2=strlen(frase);
-             
-             
-
-
 
 
              if (palindromo(frase)) {
@@ -51,10 +47,42 @@ void submenu(int opcion){
              }
              break;
 
+             case 2:
+             printf("Elegiste la opción 2\n");
+             break;
+
+             case 3:
+             printf("Elegiste la opción 3\n");
+             break;
+
+             case 4:
+             printf("Elegiste la opción 4\n");
+             break;
+
+             case 5:
+             printf("Elegiste la opción 5\n");
+             break;
+
+             case 6:
+             printf("Elegiste la opción 6\n");
+             break;
+             
+             case 7:
+             printf("Elegiste la opción 7\n");
+             break;
+
+             case 8:
+             printf("Elegiste la opción 8\n");
+             break;
+             
+             case 9:
+             printf("Elegiste la opción 9\n");
+             break;
+
 
 
             default:
-                printf("Ejercicio no implementado aún.\n");
+                printf("Opcion no validaa.\n");
                 break;
         }
 /*
@@ -84,7 +112,7 @@ int main(){
         printf("Seleccione un ejercicio: ");
         while (getchar() != '\n'); 
         scanf("%d", &opcion);
-		
+        printf("\npasamos por while del mene\n");
         if (opcion >= 1 && opcion <= 9){
             submenu(opcion);
         } else if (opcion != 0){
