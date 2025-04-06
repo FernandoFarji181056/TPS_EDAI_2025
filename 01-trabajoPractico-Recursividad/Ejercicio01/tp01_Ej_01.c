@@ -141,7 +141,7 @@ bool palindromo02(char* palabra, int longitud, int comienzo)
     {
         if (palabra[comienzo] == palabra[longitud-1])
         {
-            palindromo02(palabra,longitud-1,comienzo+1);// funcion recursiva
+            palindromo02(palabra,longitud-1,comienzo+1);// FUNCION RECURSIVA
         }
         else{
             return false; //La palabra NO es palindromo
@@ -162,7 +162,7 @@ bool palindromo(char *cadena) {
     strcpy(palabra, cadena);
 
     while (esValido == false){
-    longitud = strlen(palabra);
+        longitud = strlen(palabra);
 
         //Si el texto ingresado es mas largo que lo que admite el array lo informa
         //y vuelve a pedir un texto
@@ -217,7 +217,7 @@ bool palindromo(char *cadena) {
          }
          else
          {
-             printf("Entrada incorrecta, no puede ingresar numeros, espacios ni caracteres especialesssssss. Vuelva a intentarlo\n");
+             printf("Entrada incorrecta, no puede ingresar numeros, espacios ni caracteres especiales. Vuelva a intentarlo\n");
              system("pause");
              break;
          }
