@@ -29,7 +29,7 @@ void submenu(int opcion){
         switch (opcion) {
             case 1:
 
-             printf("(main) Ingrese una frase: \n");
+             printf("Ingrese una frase: \n");
              while (getchar() != '\n'); 
 
              fgets(frase, 1000, stdin);            	
