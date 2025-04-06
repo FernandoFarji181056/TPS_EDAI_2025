@@ -48,41 +48,50 @@ void submenu(int opcion){
              break;
 
              case 2:
-             printf("Elegiste la opción 2\n");
+             printf("Elegiste la opcion 2\n");
+             system("pause");
              break;
 
              case 3:
-             printf("Elegiste la opción 3\n");
+             printf("Elegiste la opcion 3\n");
+             system("pause");
              break;
 
              case 4:
-             printf("Elegiste la opción 4\n");
+             printf("Elegiste la opcion 4\n");
+             system("pause");
              break;
 
              case 5:
-             printf("Elegiste la opción 5\n");
+             printf("Elegiste la opcion 5\n");
+             system("pause");
              break;
 
              case 6:
-             printf("Elegiste la opción 6\n");
+             printf("Elegiste la opcion 6\n");
+             system("pause");
              break;
              
              case 7:
-             printf("Elegiste la opción 7\n");
+             printf("Elegiste la opcion 7\n");
+             system("pause");
              break;
 
              case 8:
-             printf("Elegiste la opción 8\n");
+             printf("Elegiste la opcion 8\n");
+             system("pause");
              break;
              
              case 9:
-             printf("Elegiste la opción 9\n");
+             printf("Elegiste la opcion 9\n");
+             system("pause");
              break;
 
 
 
             default:
                 printf("Opcion no validaa.\n");
+                system("pause");
                 break;
         }
 /*
@@ -99,7 +108,7 @@ void submenu(int opcion){
             }
         } while (subopcion != 1 && subopcion != 2);
   */
-    } while (subopcion == 1); // mientras quiera seguir ejecutando el ejercicio
+    } while (subopcion == 0); // mientras quiera seguir ejecutando el ejercicio
   
 }
 
@@ -107,16 +116,20 @@ void submenu(int opcion){
 
 int main(){
     int opcion;
-    do {
+    char c;
+
+     do {
         menu();
-        printf("Seleccione un ejercicio: ");
-        while (getchar() != '\n'); 
-        scanf("%d", &opcion);
-        printf("\npasamos por while del mene\n");
+        printf("Seleccione un ejercicio: ");  
+        scanf(" %d", &opcion);
+
         if (opcion >= 1 && opcion <= 9){
             submenu(opcion);
         } else if (opcion != 0){
-            printf("Opcion invalida\n");
+            printf("Opcion invalida, vuelva a intentarlo\n");
+            while((c = getchar()) != '\n' && c != EOF);
+            system("pause");
+
         }
     } while (opcion != 0);
 	
