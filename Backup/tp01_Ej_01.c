@@ -224,37 +224,3 @@ bool palindromo(char *cadena) {
 
 
     }//cierro while
-
-   // bool divisiblePor7(int n) {
-        // Versión simple
-      //  return (n % 7 == 0);
-        
-        /* Versión sin usar % (para números negativos)
-        if(n < 0) {
-            n = -n;
-        }
-        while(n > 7) {
-            n = n - 7;
-        }
-        return (n == 7 || n == 0);
-        */
-  //  }
-  //  #include <stdbool.h>
-//#include <stdlib.h> // Para abs()
-
-bool divisiblePor7(int n) {
-    // Paso base: cuando el número es menor que 70
-    if (abs(n) < 70) {
-        return (n % 7 == 0);
-    }
-    
-    // Separar el último dígito
-    int ultimoDigito = abs(n) % 10;
-    int restoDelNumero = abs(n) / 10;
-    
-    // Aplicar la regla: restoDelNumero - (2 * ultimoDigito)
-    int nuevoNumero = restoDelNumero - (2 * ultimoDigito);
-    
-    // Llamada recursiva con el nuevo número
-    return divisiblePor7(nuevoNumero);
-}

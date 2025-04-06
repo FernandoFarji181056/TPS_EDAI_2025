@@ -13,6 +13,8 @@ int multiplo (int n);
 
 int validarIngreso(char* input, int longitud);
 
+
+
 //funcion recursiva
 int multiplo(int n){
 	if (n<70){
