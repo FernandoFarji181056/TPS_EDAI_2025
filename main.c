@@ -87,7 +87,7 @@ int main(){
         if (opcion >= 1 && opcion <= 9){
             submenu(opcion);
         } else if (opcion != 0){
-            printf("Opción inválida\n");
+            printf("Opcion invalida\n");
         }
     } while (opcion != 0);
 	
