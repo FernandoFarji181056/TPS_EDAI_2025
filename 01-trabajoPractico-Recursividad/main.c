@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include "tp_1_recursividad.h" 
+#include "tp_1_prueba.h" 
 
 
 void menu(){
@@ -50,6 +51,7 @@ void submenu(int opcion){
 
              case 2:
              printf("Elegiste la opcion 2\n");
+             recibirLlamado();
              system("pause");
              break;
              
