@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include "tp_1_recursividad.h" 
 #include "tp_1_prueba.h" 
+#include "Ejercicio07/tp1_ejercicio7.h"
 
 
 void menu(){
@@ -77,6 +78,7 @@ void submenu(int opcion){
              
              case 7:
              printf("Elegiste la opcion 7\n");
+             ejercicio7();
              system("pause");
              break;
 
