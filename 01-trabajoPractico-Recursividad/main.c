@@ -7,6 +7,11 @@
 #include "tp_1_prueba.h" 
 #include "Ejercicio07/tp1_ejercicio7.h"
 
+void limpiarBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 
 void menu(){
 	
@@ -32,9 +37,11 @@ void submenu(int opcion){
         // Ejecuta el ejercicio correspondiente
         switch (opcion) {
             case 1:
+            
 
              printf("Ingrese una frase para ver si es palindromo (X para salir): \n");
-             while (getchar() != '\n'); 
+             limpiarBuffer();
+             //while (getchar() != '\n'); 
 
              fgets(frase, 1000, stdin);            	
              int longitud2 = strlen(frase);             
@@ -96,7 +103,7 @@ void submenu(int opcion){
     bool entradaValida = false;
 
     while (!entradaValida) {
-        printf("Ingrese un número entero entre -100000 y 100000: ");
+        printf("Ingrese un numero entero entre -100000 y 100000 para ver si es divisible por 7: ");
 
         if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
             // Elimina el salto de línea
@@ -113,10 +120,10 @@ void submenu(int opcion){
                     numero = (int)valor;
                     entradaValida = true;
                 } else {
-                    printf("El número debe estar entre -100000 y 100000.\n");
+                    printf("El numero debe estar entre -100000 y 100000.\n");
                 }
             } else {
-                printf("Error: debe ingresar un número entero válido sin letras ni símbolos.\n");
+                printf("Error: debe ingresar un numero entero válido sin letras ni símbolos.\n");
             }
         } else {
             printf("Error al leer la entrada.\n");
@@ -124,51 +131,16 @@ void submenu(int opcion){
     }
 
     // Ya tenemos el número válido
-    printf("Número ingresado correctamente: %d\n", numero);
+    printf("Numero ingresado correctamente: %d\n", numero);
     if (divisiblePor7(numero)) {
-        printf("El número %d es divisible por 7\n", numero);
+        printf("El numero %d es divisible por 7\n", numero);
     } else {
-        printf("El número %d NO es divisible por 7\n", numero);
+        printf("El numero %d NO es divisible por 7\n", numero);
     }
 
     system("pause");
     break;
-                     /*    // Declaramos variables específicas para este case
-                    char buffer[100];
-                    int numero;
-                    bool entradaValida = false;
-            
-                    // Ciclo de validación
-                    while(!entradaValida) {
-                        
-                         if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-                            // Elimina el salto de línea si está presente
-                        buffer[strcspn(buffer, "\n")] = '\0';
-
-                            // Verifica que toda la cadena es solo un dígito (0-9)
-                            if (strlen(buffer) == 1 && isdigit(buffer[0])) {
-                                  numero = buffer[0] - '0'; // convierte de char a int
-                               entradaValida = true;
-                        } else {
-                            printf("Error: debe ingresar un unico digito entre 0 y 9.\n");
-                      }
-                   } else {
-                      printf("Error al leer la entrada.\n");
-                  }
-                       }
-            
-                       // Aquí ya tenemos un número válido
-                       printf("Numero ingresado correctamente: %d\n", numero);
-                       if(divisiblePor7(numero)) {
-                           printf("El numero %d es divisible por 7\n", numero);
-                       } else {
-                            printf("El numero %d NO es divisible por 7\n", numero);
-                        }
-                          
-                         system("pause");
-                         break;
-*/
-
+                  
 
             default:
                 printf("Opcion no validaa.\n");

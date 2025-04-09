@@ -46,12 +46,12 @@ char * espacios(int i, int nivel){
 void ejercicio7(){
     int nivel, c;
     float f;
-    printf("Ingresar nivel de mafia(Solo numeros enteros del 1 al 9): ");
+    printf("Ingresar nivel de mafia(Solo numeros enteros del 1 al 8): ");
     do{
         fflush(stdin);
         c = scanf("%f", &f);
         nivel = f;
-    } while ((nivel != f)||(c != 1)||(nivel < 1 || nivel > 9));
+    } while ((nivel != f)||(c != 1)||(nivel < 1 || nivel > 8));
     
     for (int i = 1; i <= nivel; i++) {
         char *reunion = reunionMafia(i);
