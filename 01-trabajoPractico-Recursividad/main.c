@@ -64,8 +64,7 @@ void submenu(int opcion){
              break;
 
              case 2:
-             printf("Elegiste la opcion 2\n");
-          
+             printf("Elegiste la opcion 2\n");          
              system("pause");
              break;
              
