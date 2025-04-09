@@ -37,12 +37,9 @@ void menu(){
 
 void submenu(int opcion){
     int subopcion;
-    //int opcion;
     char frase[1000];
     char frase9[1000];
 
-   // do {
-        //system("clear");
 
         // Ejecuta el ejercicio correspondiente
         switch (opcion) {
@@ -50,9 +47,7 @@ void submenu(int opcion){
             
 
              printf("Ingrese una frase para ver si es palindromo (X para salir): \n");
-             limpiarBuffer();
-             //while (getchar() != '\n'); 
-
+    
              fgets(frase, 1000, stdin);            	
              int longitud2 = strlen(frase);             
              frase[longitud2-1]='\0'; //quita el espacio que pone fgets al final del string
@@ -70,7 +65,7 @@ void submenu(int opcion){
 
              case 2:
              printf("Elegiste la opcion 2\n");
-             //recibirLlamado();
+          
              system("pause");
              break;
              
@@ -164,20 +159,27 @@ void submenu(int opcion){
 
 
 int main(){
-    int opcion;
-    char c;
+
+    char buffer[100];
+int opcion = 0;
 
      do {
         menu();
         printf("Seleccione un ejercicio: ");  
-        scanf(" %d", &opcion);
-        while ((c = getchar()) != '\n' && c != EOF); 
+
+       if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+        opcion = atoi(buffer);  // convierte string a int
+    } else {
+        opcion = -1;  // valor inválido para forzar mensaje de error
+    }
+
+
 
         if (opcion >= 1 && opcion <= 9){
             submenu(opcion);
         } else if (opcion != 0){
             printf("Opcion invalida, vuelva a intentarlo\n");
-            while((c = getchar()) != '\n' && c != EOF);
+
             system("pause");
 
         }
