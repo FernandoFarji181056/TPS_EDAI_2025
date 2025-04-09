@@ -17,11 +17,21 @@ void menu(){
 	
 	int i;
 	system("cls");
+
 	printf("--------TP Recursividad--------\n");
-	for (i = 1; i <=9; i++){
-		printf("%d. Ejercicio %d \n", i , i);	
-	}
-	printf("0. Salir \n");
+    printf("\n");
+    printf("Ejercicio 1: Palindromo\n");
+    printf("Ejercicio 2: Multiplicacion\n");
+    printf("Ejercicio 3: Fibonacci \n");
+    printf("Ejercicio 4: Division\n");
+    printf("Ejercicio 5: Colocar Puntos\n");
+    printf("Ejercicio 6: Ondas H L\n");
+    printf("Ejercicio 7: Mafia\n");
+    printf("Ejercicio 8: Subconjuntos\n");
+    printf("Ejercicio 9: Divisible x 7 \n");
+    printf("O Ingrese cero para salir\n");
+    printf("\n");
+
 	
 }
 
@@ -98,48 +108,48 @@ void submenu(int opcion){
              case 9:
 
              
-    char buffer[100];
-    int numero;
-    bool entradaValida = false;
+                     char buffer[100];
+                      int numero;
+                       bool entradaValida = false;
 
-    while (!entradaValida) {
-        printf("Ingrese un numero entero entre -100000 y 100000 para ver si es divisible por 7: ");
+                     while (!entradaValida) {
+                           printf("Ingrese un numero entero entre -100000 y 100000 para ver si es divisible por 7: ");
 
-        if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-            // Elimina el salto de línea
-            buffer[strcspn(buffer, "\n")] = '\0';
+                            if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+                                // Elimina el salto de línea
+                                buffer[strcspn(buffer, "\n")] = '\0';
 
-            // Puntero para saber si hay caracteres no válidos
-            char *endptr;
-            long valor = strtol(buffer, &endptr, 10);  // base 10
+                                // Puntero para saber si hay caracteres no válidos
+                                char *endptr;
+                                long valor = strtol(buffer, &endptr, 10);  // base 10
 
-            // Validamos que toda la entrada sea un número válido
-            if (*endptr == '\0') {
-                // Validamos rango
-                if (valor >= -100000 && valor <= 100000) {
-                    numero = (int)valor;
-                    entradaValida = true;
-                } else {
-                    printf("El numero debe estar entre -100000 y 100000.\n");
-                }
-            } else {
-                printf("Error: debe ingresar un numero entero válido sin letras ni símbolos.\n");
-            }
-        } else {
-            printf("Error al leer la entrada.\n");
-        }
-    }
+                                // Validamos que toda la entrada sea un número válido
+                             if (*endptr == '\0') {
+                                    // Validamos rango
+                                 if (valor >= -100000 && valor <= 100000) {
+                                     numero = (int)valor;
+                                       entradaValida = true;
+                                  } else {
+                                       printf("El numero debe estar entre -100000 y 100000.\n");
+                                   }
+                                } else {
+                                    printf("Error: debe ingresar un numero entero válido sin letras ni símbolos.\n");
+                             }
+                         } else {
+                             printf("Error al leer la entrada.\n");
+                         }
+                     }
 
-    // Ya tenemos el número válido
-    printf("Numero ingresado correctamente: %d\n", numero);
-    if (divisiblePor7(numero)) {
-        printf("El numero %d es divisible por 7\n", numero);
-    } else {
-        printf("El numero %d NO es divisible por 7\n", numero);
-    }
+                          // Ya tenemos el número válido
+                      printf("Numero ingresado correctamente: %d\n", numero);
+                      if (divisiblePor7(numero)) {
+                          printf("El numero %d es divisible por 7\n", numero);
+                      } else {
+                          printf("El numero %d NO es divisible por 7\n", numero);
+                      }
 
-    system("pause");
-    break;
+                      system("pause");
+                       break;
                   
 
             default:
