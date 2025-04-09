@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include "tp_1_recursividad.h" 
 #include "tp_1_prueba.h" 
 #include "Ejercicio07/tp1_ejercicio7.h"
@@ -25,7 +26,7 @@ void submenu(int opcion){
     char frase[1000];
     char frase9[1000];
 
-    do {
+   // do {
         //system("clear");
 
         // Ejecuta el ejercicio correspondiente
@@ -52,7 +53,7 @@ void submenu(int opcion){
 
              case 2:
              printf("Elegiste la opcion 2\n");
-             recibirLlamado();
+             //recibirLlamado();
              system("pause");
              break;
              
@@ -88,72 +89,85 @@ void submenu(int opcion){
              break;
              
              case 9:
-                         // Declaramos variables específicas para este case
-            int numero;
-            bool entradaValida = false;
-            
-            // Ciclo de validación
-            while(!entradaValida) {
-                printf("Por favor ingrese un numero entero: ");
-                
-                // Verificamos si scanf leyó correctamente un entero
-                if(scanf("%d", &numero) == 1) {
+
+             
+    char buffer[100];
+    int numero;
+    bool entradaValida = false;
+
+    while (!entradaValida) {
+        printf("Ingrese un número entero entre -100000 y 100000: ");
+
+        if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+            // Elimina el salto de línea
+            buffer[strcspn(buffer, "\n")] = '\0';
+
+            // Puntero para saber si hay caracteres no válidos
+            char *endptr;
+            long valor = strtol(buffer, &endptr, 10);  // base 10
+
+            // Validamos que toda la entrada sea un número válido
+            if (*endptr == '\0') {
+                // Validamos rango
+                if (valor >= -100000 && valor <= 100000) {
+                    numero = (int)valor;
                     entradaValida = true;
-                    
-                    // Aquí puedes agregar más validaciones si necesitas
-                    // Por ejemplo, verificar rango:
-                    // if(numero >= 0 && numero <= 100) {
-                    //     entradaValida = true;
-                    // } else {
-                    //     printf("El número debe estar entre 0 y 100\n");
-                    // }
                 } else {
-                    printf("Error: Debe ingresar un número entero válido.\n");
-                    
-                    // Limpiamos el buffer de entrada para evitar bucles infinitos
-                    while(getchar() != '\n');
+                    printf("El número debe estar entre -100000 y 100000.\n");
                 }
-            }
-            
-            // Aquí ya tenemos un número válido
-            printf("Numero ingresado correctamente: %d\n", numero);
-            if(divisiblePor7(numero)) {
-                printf("El numero %d es divisible por 7\n", numero);
             } else {
-                printf("El numero %d NO es divisible por 7\n", numero);
+                printf("Error: debe ingresar un número entero válido sin letras ni símbolos.\n");
             }
+        } else {
+            printf("Error al leer la entrada.\n");
+        }
+    }
+
+    // Ya tenemos el número válido
+    printf("Número ingresado correctamente: %d\n", numero);
+    if (divisiblePor7(numero)) {
+        printf("El número %d es divisible por 7\n", numero);
+    } else {
+        printf("El número %d NO es divisible por 7\n", numero);
+    }
+
+    system("pause");
+    break;
+                     /*    // Declaramos variables específicas para este case
+                    char buffer[100];
+                    int numero;
+                    bool entradaValida = false;
             
-            // Más código específico para el case 2...
-            break;
+                    // Ciclo de validación
+                    while(!entradaValida) {
+                        
+                         if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+                            // Elimina el salto de línea si está presente
+                        buffer[strcspn(buffer, "\n")] = '\0';
 
-/*
-
-             printf("Ingrese un entero para ver si es divisible por 7: \n");
-             while (getchar() != '\n'); 
-
-             fgets(frase9, 1000, stdin);            	
-             int longitud9 = strlen(frase9);             
-             frase9[longitud9-1]='\0'; //quita el espacio que pone fgets al final del string
-             longitud9=strlen(frase9);
-
-
-             if (divisiblePor7(frase9)) {
-                 printf("ES divisible x 7\n");
-                 system("pause");
-             } else {
-                 printf("NO divisible x 7\n");
-                 system("pause");
-             }
-             break;
-             system("pause");
-             break;
+                            // Verifica que toda la cadena es solo un dígito (0-9)
+                            if (strlen(buffer) == 1 && isdigit(buffer[0])) {
+                                  numero = buffer[0] - '0'; // convierte de char a int
+                               entradaValida = true;
+                        } else {
+                            printf("Error: debe ingresar un unico digito entre 0 y 9.\n");
+                      }
+                   } else {
+                      printf("Error al leer la entrada.\n");
+                  }
+                       }
+            
+                       // Aquí ya tenemos un número válido
+                       printf("Numero ingresado correctamente: %d\n", numero);
+                       if(divisiblePor7(numero)) {
+                           printf("El numero %d es divisible por 7\n", numero);
+                       } else {
+                            printf("El numero %d NO es divisible por 7\n", numero);
+                        }
+                          
+                         system("pause");
+                         break;
 */
-
-
-             printf("Elegiste la opcion 9\n");
-             system("pause");
-             break;
-
 
 
             default:
@@ -162,23 +176,7 @@ void submenu(int opcion){
                 break;
                
         }
-        while (getchar() != '\n'); 
-/*
-        // Bucle interno para validar ingreso
-        do {
-            printf("\n1. Desea volver a ingresar un nuevo dato?\n");
-            printf("2. Volver al menu principal\n");
-            printf("Ingrese una opcion: ");
-            scanf("%d", &subopcion);
-            getchar(); // limpia el buffer del ENTER
-
-            if (subopcion != 1 && subopcion != 2) {
-                printf("Opcion invalida. Intente nuevamente.\n\n");
-            }
-        } while (subopcion != 1 && subopcion != 2);
-  */
-    } while (subopcion == 0); // mientras quiera seguir ejecutando el ejercicio
-  
+        while (getchar() != '\n');   
 }
 
 
@@ -191,6 +189,7 @@ int main(){
         menu();
         printf("Seleccione un ejercicio: ");  
         scanf(" %d", &opcion);
+        while ((c = getchar()) != '\n' && c != EOF); 
 
         if (opcion >= 1 && opcion <= 9){
             submenu(opcion);
