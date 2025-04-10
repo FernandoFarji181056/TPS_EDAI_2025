@@ -179,12 +179,33 @@ int opcion = 0;
    //  do {
         menu();
         printf("Seleccione un ejercicio: ");  
-
+/*
        if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
         opcion = atoi(buffer);  // convierte string a int
     } else {
         opcion = -1;  // valor inválido para forzar mensaje de error
     }
+*/
+if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+    buffer[strcspn(buffer, "\n")] = '\0';  // Quita el salto de línea
+
+    bool esNumero = true;
+    for (int i = 0; buffer[i] != '\0'; i++) {
+        if (!isdigit(buffer[i])) {
+            esNumero = false;
+            break;
+        }
+    }
+
+    if (esNumero) {
+        opcion = atoi(buffer);
+    } else {
+        opcion = -1;  // fuerza que entre en el "opcion invalida"
+    }
+} else {
+    opcion = -1;
+}
+
 
 
 
