@@ -4,7 +4,8 @@
 #include <string.h>
 #include <math.h>
 #include <stdbool.h>
-//#include "libs/validaciones/headers/Validacion_datos.h"
+#include "libs/validaciones/headers/Validacion_datos.h"
+#include "libs/validaciones/headers/tp01-ej-08.h"
 
 // ----- FUNCIONES DE VALIDACION ----- //
 //#ifndef Validacion_datos
@@ -18,7 +19,7 @@ void imprimirConjunto(int* conjunto, int longitud, int indice);
 void subconjuntos(int* conjunto,int longitud, int suma_buscada, int indiceConjunto, int* subconjunto, int indiceSubconjunto, int longitudSubconjunto);
 
 
-
+/*
 bool validarEntero(char* cadena)
 {
 	//printf("entramos a validar entero\n");
@@ -42,7 +43,7 @@ bool validarEntero(char* cadena)
     }
 
     return esNumero;
-}
+}*/
 
 
 
@@ -120,7 +121,8 @@ void subconjuntos(int* conjunto,int longitud, int suma_buscada, int indiceConjun
 
 
 
-int main()
+//int main()
+void ejecutarSubconjuntos()
 {	int i=0;
 	int longitud;
 	int longitud1; 
@@ -293,5 +295,5 @@ else{
 }
 		printf(" \n");
     system("pause");
-    return 0;
+    //return 0;
 }

@@ -8,6 +8,7 @@
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/validaciones/headers/tp01_EJ_04.h"
 #include "libs/validaciones/headers/tp1_ejercicio7.h"
+#include "libs/validaciones/headers/tp01-ej-08.h"
 
 void ejecutarProducto();
 
@@ -104,6 +105,7 @@ void submenu(int opcion){
 
              case 8:
              printf("Elegiste la opcion 8\n");
+             ejecutarSubconjuntos();
              system("pause");
              break;
              
