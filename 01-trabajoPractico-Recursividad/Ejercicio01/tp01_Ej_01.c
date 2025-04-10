@@ -123,7 +123,7 @@ bool palindromo(char *cadena) {
   //  }
   //  #include <stdbool.h>
 //#include <stdlib.h> // Para abs()
-
+/*
 bool divisiblePor7(int n) {
     // Paso base: cuando el número es menor que 70
     if (abs(n) < 70) {
@@ -139,4 +139,4 @@ bool divisiblePor7(int n) {
     
     // Llamada recursiva con el nuevo número
     return divisiblePor7(nuevoNumero);
-}
+}*/
