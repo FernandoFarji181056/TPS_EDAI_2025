@@ -4,7 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdbool.h>
-#include "libs/validaciones/headers/Validacion_datos.h"
+//#include "libs/validaciones/headers/Validacion_datos.h"
 
 // ----- FUNCIONES DE VALIDACION ----- //
 //#ifndef Validacion_datos

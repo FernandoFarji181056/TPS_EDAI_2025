@@ -5,16 +5,17 @@
 #include <ctype.h>
 #include "libs/validaciones/headers/Validacion_datos.h"
 
-
+/*
 // ----- FUNCIONES DE VALIDACION ----- //
 #ifndef Validacion_datos
 #define Validacion_datos
 
-
+*/
 /*
     La funcion devuelve un booleano para validar si el string ingresado es un numero int valido o no
     Se compara con el codigo ASCII del 48 al 57 que son los numeros del 0 al 9
 */
+/*
 bool validarEntero(char* cadena)
 {
     int i;
@@ -38,13 +39,13 @@ bool validarEntero(char* cadena)
 
     return esNumero;
 }
-
+*/
 
 /*
     La funcion recibe como parametro una cadena CHAR que va a contener la oracion original
     con mayusculas y minusculas. Retorna una cadena nueva solo en mayusculas
 */
-
+/*
 char* pasarAMayuscula(char* cadena)
 {
 
@@ -65,13 +66,13 @@ char* pasarAMayuscula(char* cadena)
     return cadenaMayus;
 
 }
-
+*/
 
 /*
     La funcion recibe como parametro una cadena CHAR que va a contener la oracion con espacios
     y la longitud de dicha cadena. Retorna una cadena nueva con la cadena original sin espacios
 */
-
+/*
 char* sacarEspacios(char* input)
 {
     int i,j;
@@ -92,12 +93,12 @@ char* sacarEspacios(char* input)
 }
 
 
-
+*/
 /*
     La funcion recibe como parametro un array de char y valida si su contenido son letras, sin importar si son mayusculas o minusculas.
     - Numeros y caracteres especiales no son validos
 */
-
+/*
 bool validarLetras(char* cadena)
 {
 
@@ -125,11 +126,12 @@ bool validarLetras(char* cadena)
 
 }
 
-
+*/
 
 /*
     La funcion recibe un string por parametro y retorna un nuevo string invertido
 */
+/*
 char* invertirString(char* cadena)
 {
     int i,j;
@@ -150,7 +152,7 @@ char* invertirString(char* cadena)
 
 #endif
 // ----- FUNCIONES DE VALIDACION ----- //
-
+*/
 
 char* quitarCerosIzquierda(char* numero)
 {
