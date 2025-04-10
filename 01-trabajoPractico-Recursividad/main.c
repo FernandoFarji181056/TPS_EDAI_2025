@@ -196,7 +196,8 @@ int opcion = 0;
             system("pause");
 
         }
-    } while (opcion != 0);
+    //} while (opcion != 0);
+} while (0);//para que no vuleva a repetir el do while
 	
     return 0;
 }
