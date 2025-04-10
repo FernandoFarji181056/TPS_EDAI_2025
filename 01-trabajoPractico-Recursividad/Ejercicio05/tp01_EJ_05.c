@@ -208,15 +208,15 @@ void SeparadorMiles(char* numero, int longitud, char* resultado, int n)
 
 }
 
-
-int main()
+char * agregarSeparadorMiles(char numero[])
+//int main()
 {
 
 
 
 
     int i,longitud;
-    char* numero = (char*) malloc(50 * sizeof(char));
+    char* numero3 = (char*) malloc(50 * sizeof(char));
     char* numero2 = (char*) malloc(100 * sizeof(char));
     bool esValido = false;
     printf("----- Colocar separador -----\n");
@@ -226,18 +226,18 @@ int main()
     {
 
         printf("Ingrese un Numero (X para salir): ");
-        gets(numero);
-        longitud = strlen(numero);
+        gets(numero3);
+        longitud = strlen(numero3);
 
         //Condicion de salida
-        if ((numero[0] == 88  || numero[0] == 120) && longitud == 1) break;
+        if ((numero3[0] == 88  || numero3[0] == 120) && longitud == 1) break;
 
         //Validaciones
-        if (validarEntero(numero) && longitud < 10 && numero[0] != 32)
+        if (validarEntero(numero3) && longitud < 10 && numero3[0] != 32)
         {
             //Elimino los 0 de adelante
-            numero = quitarCerosIzquierda(numero);
-            longitud = strlen(numero);
+            numero3 = quitarCerosIzquierda(numero3);
+            longitud = strlen(numero3);
             esValido = true;
         }
         else
@@ -248,7 +248,7 @@ int main()
 
     }
 
-    SeparadorMiles(numero,longitud,numero2,0);
+    SeparadorMiles(numero3,longitud,numero2,0);
     longitud = strlen(numero2);
     //Imprimo el numero invertido
     for (i = longitud; i >= 0; i--)

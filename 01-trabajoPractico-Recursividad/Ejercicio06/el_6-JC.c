@@ -5,7 +5,7 @@
 #include <ctype.h>
 #include "libs/validaciones/headers/Validacion_datos.h"
 
-void ondaDigital(const char *entrada, int indice, char Anterior) {
+void ondaDigitalRec(const char *entrada, int indice, char Anterior) {
     // Caso base: si llegamos al final de la cadena
     if (entrada[indice] == '\0') {
         return;
@@ -38,10 +38,11 @@ void ondaDigital(const char *entrada, int indice, char Anterior) {
     }
 
     // Llamado recursivo con el siguiente carácter
-    ondaDigital(entrada, indice + 1, entrada[indice]);
+    ondaDigitalRec(entrada, indice + 1, entrada[indice]);
 }
 
-int main() {
+//int main() {
+char *ondaDigital(char seniales[]) {
     char entrada[100];
     printf("Ingrese la senial digital (L/H): ");
     scanf("%s", entrada);
@@ -55,12 +56,12 @@ int main() {
         if (entrada[i] != 'L' && entrada[i] != 'H') {
             printf("Error: letra no valida\n");
             system("pause");
-            return 1;
+            return NULL;
         }
     }
     printf("Onda digital: ");
-    ondaDigital(entrada, 0, '\0');
+    ondaDigitalRec(entrada, 0, '\0');
     printf("\n");
     system("pause");
-    return 0;
+    return NULL;
 }

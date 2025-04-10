@@ -89,11 +89,15 @@ void submenu(int opcion){
 
              case 5:
              printf("Elegiste la opcion 5\n");
+             char numero[] = "nomandonadapideentradaenelejercicio"; 
+             agregarSeparadorMiles(numero);
              system("pause");
              break;
 
              case 6:
              printf("Elegiste la opcion 6\n");
+             char entrada[] = "nomandonadapideentradaenelejercicio"; 
+             ondaDigital(entrada);
              system("pause");
              break;
              
@@ -112,8 +116,8 @@ void submenu(int opcion){
              case 9:
 
              
-                     char buffer[100];
-                      int numero;
+                      char buffer[100];
+                      int numero02;
                        bool entradaValida = false;
 
                      while (!entradaValida) {
@@ -131,7 +135,7 @@ void submenu(int opcion){
                              if (*endptr == '\0') {
                                     // Validamos rango
                                  if (valor >= -100000 && valor <= 100000) {
-                                     numero = (int)valor;
+                                     numero02 = (int)valor;
                                        entradaValida = true;
                                   } else {
                                        printf("El numero debe estar entre -100000 y 100000.\n");
@@ -145,11 +149,11 @@ void submenu(int opcion){
                      }
 
                           // Ya tenemos el número válido
-                      printf("Numero ingresado correctamente: %d\n", numero);
-                      if (divisiblePor7(numero)) {
-                          printf("El numero %d es divisible por 7\n", numero);
+                      printf("Numero ingresado correctamente: %d\n", numero02);
+                      if (divisiblePor7(numero02)) {
+                          printf("El numero %d es divisible por 7\n", numero02);
                       } else {
-                          printf("El numero %d NO es divisible por 7\n", numero);
+                          printf("El numero %d NO es divisible por 7\n", numero02);
                       }
 
                       system("pause");
