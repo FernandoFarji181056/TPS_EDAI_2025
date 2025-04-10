@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include "libs/validaciones/headers/Validacion_datos.h"
 
 void ondaDigital(const char *entrada, int indice, char Anterior) {
     // Caso base: si llegamos al final de la cadena

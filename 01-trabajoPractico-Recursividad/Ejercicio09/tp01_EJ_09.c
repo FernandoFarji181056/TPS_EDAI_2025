@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libs/validaciones/headers/Validacion_datos.h"
 /*
 Escribir una función recursiva que implemente el método que se describe para saber si
 un número es divisible por 7. Se separa la primera cifra de la derecha, se la multiplica

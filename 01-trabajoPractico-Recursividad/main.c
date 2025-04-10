@@ -6,6 +6,11 @@
 #include "tp_1_recursividad.h" 
 #include "tp_1_prueba.h" 
 #include "Ejercicio07/tp1_ejercicio7.h"
+#include "libs/validaciones/headers/Validacion_datos.h"
+#include "libs/validaciones/headers/tp01_EJ_04.h"
+
+
+void ejecutarProducto();
 
 void limpiarBuffer() {
     int c;
@@ -64,17 +69,21 @@ void submenu(int opcion){
              break;
 
              case 2:
-             printf("Elegiste la opcion 2\n");          
+             printf("Elegiste la opcion 2\n");   
+             ejecutarProducto();
+             return ;       
              system("pause");
              break;
              
              case 3:
              printf("Elegiste la opcion 3\n");
+             terminoSeridFibonacci(3); //mando un numero cualquiera porque el ingreso lo pide en el .c del ejercicio
              system("pause");
              break;
 
              case 4:
              printf("Elegiste la opcion 4\n");
+             ejecutarDivision(); //mando un numeros cualquiera porque el ingreso lo pide en el .c del ejercicio
              system("pause");
              break;
 

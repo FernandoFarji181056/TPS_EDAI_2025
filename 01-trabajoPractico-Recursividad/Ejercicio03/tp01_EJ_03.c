@@ -9,6 +9,7 @@ terminoSeridFibonacci (6) => 8
 #include<stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libs/validaciones/headers/Validacion_datos.h"
 
 int Fibo (int n);
 
@@ -49,7 +50,10 @@ int Fibo(int n){
 	}	
  }
 
- int main(){
+ //int main(){
+	int terminoSeridFibonacci(int k) {
+		(void)k; // Para evitar advertencias por no usar el parámetro
+
 
 	int validacion=0;	
 	int entero2;

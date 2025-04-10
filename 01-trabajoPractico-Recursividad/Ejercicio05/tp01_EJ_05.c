@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include "libs/validaciones/headers/Validacion_datos.h"
 
 
 // ----- FUNCIONES DE VALIDACION ----- //
