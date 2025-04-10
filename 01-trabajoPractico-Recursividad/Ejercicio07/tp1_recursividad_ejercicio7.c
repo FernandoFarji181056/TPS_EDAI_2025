@@ -67,10 +67,4 @@ void ejercicio7(){
     system("pause");
 
 }
-/*
-// FUNCION MAIN AGREGADA
-int main() {
-    ejercicio7();
-    return 0;
-}
-*/
+

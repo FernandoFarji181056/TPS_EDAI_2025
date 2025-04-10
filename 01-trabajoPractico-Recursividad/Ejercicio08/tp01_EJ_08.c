@@ -7,44 +7,12 @@
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/validaciones/headers/tp01-ej-08.h"
 
-// ----- FUNCIONES DE VALIDACION ----- //
-//#ifndef Validacion_datos
-//#define Validacion_datos
-
 
 
 //Prototipo de funcion
 int sumaConjunto(int* conjunto, int longitud, int indice);
 void imprimirConjunto(int* conjunto, int longitud, int indice);
 void subconjuntos(int* conjunto,int longitud, int suma_buscada, int indiceConjunto, int* subconjunto, int indiceSubconjunto, int longitudSubconjunto);
-
-
-/*
-bool validarEntero(char* cadena)
-{
-	//printf("entramos a validar entero\n");
-    int i;
-    bool esNumero = false;
-    int longitud = strlen(cadena);
-
-    if (cadena[0] == '-') i = 1;
-    else i = 0;
-
-    for (i; i < longitud; i++)
-    {
-        //Valido que el input sea un NUMERO
-        if (cadena[i] >= 48 && cadena[i] <=57)
-        {
-            if (cadena[i] != ' ') esNumero = true;
-            else return false;
-            
-        }
-        else return false;
-    }
-
-    return esNumero;
-}*/
-
 
 
 
