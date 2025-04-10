@@ -176,7 +176,7 @@ int main(){
     char buffer[100];
 int opcion = 0;
 
-     do {
+   //  do {
         menu();
         printf("Seleccione un ejercicio: ");  
 
@@ -197,7 +197,7 @@ int opcion = 0;
 
         }
     //} while (opcion != 0);
-} while (0);//para que no vuleva a repetir el do while
+//} while (0);//para que no vuleva a repetir el do while
 	
     return 0;
 }
