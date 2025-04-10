@@ -84,6 +84,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 4\n");
              ejecutarDivision(); //mando un numeros cualquiera porque el ingreso lo pide en el .c del ejercicio
              system("pause");
+             exit(0);
              break;
 
              case 5:
