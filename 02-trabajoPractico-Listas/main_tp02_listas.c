@@ -44,10 +44,6 @@ void menu(){
 }
 
 void submenu(int opcion){
-    //int subopcion;
-    //char frase[1000];
-    //char frase9[1000];
-
 
         // Ejecuta el ejercicio correspondiente
         switch (opcion) {
@@ -60,8 +56,8 @@ void submenu(int opcion){
 
              case 2:
              printf("Elegiste la opcion 2\n");   
-             
-            // ejecutarProducto();
+             //ejecutar_TP2_EJ02();
+
              return ;       
              system("pause");
              break;
@@ -69,48 +65,30 @@ void submenu(int opcion){
              case 3:
              ejecutar_TP2_EJ03();
              printf("Elegiste la opcion 3\n");
-            // terminoSeridFibonacci(3); //mando un numero cualquiera porque el ingreso lo pide en el .c del ejercicio
-            // system("pause");
+
              break;
 
              case 4:
              printf("Elegiste la opcion 4\n");
-           //  ejecutarDivision(); //mando un numeros cualquiera porque el ingreso lo pide en el .c del ejercicio
+             //ejecutar_TP2_EJ04();
+       
              system("pause");
              exit(0);
              break;
 
              case 5:
              printf("Elegiste la opcion 5\n");
-             char numero[] = "nomandonadapideentradaenelejercicio"; 
-          //   agregarSeparadorMiles(numero);
+             //ejecutar_TP2_EJ05();
+             
              system("pause");
              break;
 
              case 6:
              printf("Elegiste la opcion 6\n");
-             char entrada[] = "nomandonadapideentradaenelejercicio"; 
-           //  ondaDigital(entrada);
-             system("pause");
-             break;
-             
-             case 7:
-             printf("Elegiste la opcion 7\n");
-         //    ejercicio7();
-             system("pause");
-             break;
+             //ejecutar_TP2_EJ06();
 
-             case 8:
-             printf("Elegiste la opcion 8\n");
-           //  ejecutarSubconjuntos();
              system("pause");
              break;
-             
-             case 9:             
-             printf("Elegiste la opcion 9\n");
-
-                      system("pause");
-                       break;
                   
 
             default:
