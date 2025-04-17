@@ -10,4 +10,6 @@ structura de Datos y Algoritmos I, Universidad Nacional de Lujan
 ## Alumnos:
 
 Apellido y Nombre // Legajo // Mails
+Farji Fernando David // 181056 // fernandounlu@hotmail.com
+
 
