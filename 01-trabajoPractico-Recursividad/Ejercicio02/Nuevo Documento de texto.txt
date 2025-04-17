@@ -1,0 +1,6 @@
+#ifndef TP01_EJ_01_H
+#define TP01_EJ_01_H
+
+void ejecutarProducto();
+
+#endif

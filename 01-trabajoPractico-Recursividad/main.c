@@ -77,7 +77,7 @@ void submenu(int opcion){
              case 3:
              printf("Elegiste la opcion 3\n");
              terminoSeridFibonacci(3); //mando un numero cualquiera porque el ingreso lo pide en el .c del ejercicio
-             system("pause");
+             //system("pause");
              break;
 
              case 4:
