@@ -161,8 +161,7 @@ TipoElemento l_buscar(Lista lista, int clave) {
 bool l_insertar(Lista lista, TipoElemento elemento, int pos) {
     // Controla si la posicion ordinal es mayor a la cantidad
     // llama automaticamente al agregar
-    if (pos > l_longitud(lista)) {
-        l_agregar(lista, elemento);
+    if ((pos < 1) || (pos > l_longitud(lista))) {
         return false;
     }
 
@@ -195,6 +194,10 @@ bool l_eliminar(Lista lista, int pos) {
     bool borre = false;
     int actual = lista->inicio;
 
+    if (l_es_vacia(lista)) {
+	return false;
+    }
+
     if (1 <= pos && pos <= l_longitud(lista)) {
         if (pos == 1) {
             p = actual;
@@ -220,6 +223,10 @@ bool l_eliminar(Lista lista, int pos) {
 
 
 TipoElemento l_recuperar(Lista lista, int pos) {
+    if ((pos < 1) || (pos > l_longitud(lista)) {
+	return NULL;
+    }
+ 
     int temp2 = lista->inicio;
     for (int i = 0; i < pos - 1; i++) {
         temp2 = lista->cursor[temp2].siguiente;

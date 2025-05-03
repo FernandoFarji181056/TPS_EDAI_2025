@@ -46,9 +46,11 @@ int CompararListas(Lista l1, Lista L2);
 mismos tendrán el exponente o grado del término (entero mayor o igual a 0) en "clave" y el coeficiente real 
 apuntado por "valor". */
 void hacerPolinomio(Lista list);
+
 /*Función que recibe el polinomio y un número real y devuelve el valor del polinomio 
 evaluado en ese valor de x.*/
 float evaluarPoliomio(Lista list, float x);
+
 /*Función que calcula el polinomio en un rango de valores de x.
 Recibe: el polinomio, los valores mínimo y máximo del intervalo y la diferencia entre cada valor 
 tomado del intervalo.
