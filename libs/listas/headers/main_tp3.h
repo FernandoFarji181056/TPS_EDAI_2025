@@ -3,6 +3,7 @@
 
 void ejecutar_TP2_EJ02();
 void ejecutar_TP2_EJ03();
+void ejecutar_TP2_EJ03_02();
 void ejecutar_TP2_EJ04();
 void ejecutar_TP2_EJ05();
 void ejecutar_TP2_EJ06();

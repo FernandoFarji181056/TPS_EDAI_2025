@@ -3,23 +3,30 @@
 #include <stdbool.h>
 #include <string.h>
 
+#ifdef _WIN32
+    #define CLEAR_COMMAND "cls"
+#else
+    #define CLEAR_COMMAND "clear"
+#endif
+
+
+
 #include "libs/listas/headers/listas.h"
 #include "libs/listas/headers/main_tp3.h"
+#include "libs/listas/headers/Tp_2_listas.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 #include "libs/validaciones/headers/Validacion_datos.h"
 
+void clearScreen() {
+	system(CLEAR_COMMAND);
+ }
 
-
-
-
-
-
-//--------------------------------------------------------------------
-//MAIN PRINCIPAL
-//--------------------------------------------------------------------
-//era int main ()
 void ejecutar_TP2_EJ03_02()
-{		//int salida=0;
+{	
+
+
+        clearScreen();
+  
 		bool salida01=false;
 		bool salida02=false;
 		//int validacion1=0;
@@ -39,19 +46,20 @@ void ejecutar_TP2_EJ03_02()
 		
 		L =l_crear();
 		L2 =l_crear();
-
+		printf ("AHORA CARGAREMOS 2 LISTAS CON NUMEROS ENTEROS COMPRENDIDOS ENTRE 1 Y 1000,\n");
+		printf ("LAS LISTA TIENEN QUE TENER EL MISMO TAMANIO Y NO PUEDE ESTAR VACIAS,\n");
+		printf ("LUEGO SE INFORMARA SI LA SEGUNDA LISTA ES MULTIPLO DE LA PRIMERA Y SI ADEMAS ES ESCALAR,\n\n");
 		printf ("INTRODUZCA NUMEROS ENTEROS PARA CREAR UNA LISTA (SOLO NUMEROS, sin espacio ni otro caracter),\n");
-        printf("INGRESE CERO EN AMBAS ENTRADAS O AMBAS ENTRADAS VACIAS PARA SALIR\n");
-		do{		
-	
+        printf("INGRESE 'x' SALIR\n");
+
+		do{			
 		
-		printf ("\nIntroduzca un numero entero entre 2 y 1000 para agregar a la primera Lista o X para salir y cargar otra Lista: ");
+		printf ("\nIntroduzca un numero entero entre 1 y 1000 para agregar a la primera Lista o X para salir y cargar otra Lista: ");
+
 		fgets(string1,1000,stdin); // pide por pantalla el ingreso
 		int longitud1 = strlen(string1);
 		string1[longitud1-1]='\0'; // quita el caracter \n que fgets agrega al final de string
-
 		longitud1=strlen(string1);
-
 		validacion1=validarEntero(string1); //valida el ingreso controlando que solo se hayan ingresado numeros
 
 		if (  (string1[0] == 'X' || string1[0] == 'x') && longitud1==1   ){
@@ -59,19 +67,20 @@ void ejecutar_TP2_EJ03_02()
 			}
 
 		if( validacion1==false && salida01==false ) 
-		 {printf("la entrada NOOOOOO fue validada\n\n");}
+		 {printf("la entrada NO fue validada\n\n");}
 
 		if (validacion1){
 			entero1=(int) strtol(string1,NULL,10); //pasa string a entero
-			 if (entero1 <2 || entero1 > 1000){
+			 if (entero1 <1 || entero1 > 1000){
 				printf("El numero ingresado no cumple con los requisitos, intentelo nuevamente\n");
 				salida01=false;
 			 }
 			 else{
 			X = te_crear(entero1);
 			l_agregar(L, X);
-			system ("cls");
-			//l_mostrarLista(L);
+			//system ("cls");
+			clearScreen();
+			l_mostrar(L);
 			 }
 		}
 		}while(!salida01);
@@ -121,13 +130,13 @@ void ejecutar_TP2_EJ03_02()
 
 
 		}
-		
+		/*
 			if ( l_es_vacia (L) && l_es_vacia(L2) ){
 			listasVacias=true;
-			printf("ambas listas son vacias\n");
+			printf("NO PUEDE HABER LISTAS VACIAS Y LAS LISTAS TIENEN QUE TENER EL MISMO TAMANIO, GRACIAS\n");
 			system("pause");}
 
-
+		*/
 
 		}while(!salida02);
 
@@ -141,47 +150,33 @@ void ejecutar_TP2_EJ03_02()
 		l_mostrar(L2);
 		printf("\n");
 
-		if (  (l_longitud(L)==l_longitud(L2) ) && !listasVacias ){
-			//printf("tienen el mismo tamano\n");
-			int longit=l_longitud(L);
+		if ( l_es_vacia (L) || l_es_vacia(L2) || l_longitud(L) != l_longitud(L2)){
+			listasVacias=true;
+			printf("NO PUEDE HABER LISTAS VACIAS Y LAS LISTAS TIENEN QUE TENER EL MISMO TAMANIO\n");
+			printf("INTENELO NUEVAMENTE CUANDO QUIERA, GRACIAS\n");
+			system("pause");}
 
-			X = l_recuperar(L, 1);
-			float valor1=X->clave;
-			//printf("valor1: %f \n",valor1);
-			X = l_recuperar(L2, 1);
-			float valor2=X->clave;
-			//printf("valor2: %f \n",valor2);
+			else {
+				printf("ahora comparamos las listas\n");
+				ResultadosMul resultado = multiplo(L, L2);
 
-			float multiplo = valor1 / valor2;
-			//printf("el multiplo es: %f \n",multiplo);
+				if (resultado.esMultiplo) {
+					printf("La segunda lista ES multiplo de la primera.\n");
+				} else {
+					printf("La segunda lista NO es multiplo de la primera.\n");
+				}
+			
+				// Verificación de escalar
+				if (resultado.escalar) {
+					printf("Ademas, ES escalar. El numero escalar es: %d\n", resultado.numEscalar);
+					//printf("El escalar es: %d", resultado.numEscalar);
+				} else {
+					printf("No es escalar.\n");
+				}
+
+			}
+
+
+
+    }
 		
-			bool esMultiplo=true;
-			for (i=2;i<=longit;i++){
-				
-				X = l_recuperar(L, i);			
-				valor1=X->clave;
-				//printf("igreso L1: %f \n",valor1);
-
-				X = l_recuperar(L2, i);				
-				valor2=X->clave;
-				//printf("Ingreso L2: %f \n",valor2);
-
-				//printf("el valor cuargado es: %i",valor1);
-				//printf("i= %i\n",i);
-				float multiplo2=valor1 / valor2;
-				if (multiplo!=multiplo2)
-					{ esMultiplo=false; }
-			} if (esMultiplo){printf("\nUNA LISTA ES MULTIPLO DE LA OTRA\n\n");
-			}else{printf("\nNO SON MULTIPLO\n\n");}
-
-		}else {
-			printf ("Las listas ingresadas NOOOO tienen el mismo tamanio o ambas son vacias, si lo desea puede velver a intertarlo\n\n");
-			printf ("GRACIAS POR UTILIZAR SISTEMAS UNLu\n\n");
-		
-		}
-
-
-		system("pause");
-		return;
-		
-}

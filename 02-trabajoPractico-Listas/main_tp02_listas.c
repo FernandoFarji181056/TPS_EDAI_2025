@@ -6,6 +6,7 @@
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/listas/headers/main_tp3.h"
 #include "libs/listas/headers/listas.h"
+#include "libs/listas/headers/Tp_2_listas.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 
 
@@ -47,13 +48,13 @@ void submenu(int opcion){
 
         // Ejecuta el ejercicio correspondiente
         switch (opcion) {
-            case 1:
+           /* case 1:
 
             printf("Elegiste la opcion 1\n");   
                  system("pause");
              
              break;
-
+                */
              case 2:
              printf("Elegiste la opcion 2\n");   
              //ejecutar_TP2_EJ02();
@@ -62,10 +63,11 @@ void submenu(int opcion){
              system("pause");
              break;
              
-             case 3:
-             ejecutar_TP2_EJ03();
+             case 3:             
              printf("Elegiste la opcion 3\n");
-
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
+             system("pause");
+             ejecutar_TP2_EJ03_02();
              break;
 
              case 4:
@@ -92,7 +94,7 @@ void submenu(int opcion){
                   
 
             default:
-                printf("Opcion no validaa.\n");
+                printf("Opcion no valida.\n\n");
                 system("pause");
                 break;
                
@@ -115,7 +117,8 @@ int main(){
 
     if (validarEntero(ingreso))
     {
-        printf("Ingreso valido\n");
+       // printf("Ingreso de numero de ejercicio CORRECTO\n\n");
+        
         int opcion = atoi(ingreso);
         submenu(opcion);
         
