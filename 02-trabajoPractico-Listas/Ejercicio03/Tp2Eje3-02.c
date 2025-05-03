@@ -91,7 +91,7 @@ void ejecutar_TP2_EJ03_02()
 
 				do{		
 			
-		printf ("\nIntroduzca un numero entre 2 y 1000 para agregar a la segunda Lista o X para salir: ");
+		printf ("\nIntroduzca un numero entre 1 y 1000 para agregar a la segunda Lista o X para salir: ");
 		fgets(string2,1000,stdin); // pide por pantalla el ingreso
 		int longitud2 = strlen(string2);
 		string2[longitud2-1]='\0'; // quita el caracter \n que fgets agrega al final de string
@@ -105,13 +105,13 @@ void ejecutar_TP2_EJ03_02()
 			}
 
 		if( validacion2==false && salida02==false ) 
-		 {printf("la entrada NOOOOOO fue validada\n\n");}
+		 {printf("la entrada NO fue validada\n\n");}
 
 		if (validacion2){
 			entero2=(int) strtol(string2,NULL,10); //pasa string a entero
 
-			 if (entero2 <2 || entero2 > 1000){
-				printf("El numero ingresado no cumple con los requisitos, intentelo nuevamente\n");
+			 if (entero2 < 1 || entero2 > 1000){
+				printf("El numero ingresado NO cumple con los requisitos, intentelo nuevamente\n");
 				salida01=false;
 			 }
 			 else{
@@ -130,13 +130,7 @@ void ejecutar_TP2_EJ03_02()
 
 
 		}
-		/*
-			if ( l_es_vacia (L) && l_es_vacia(L2) ){
-			listasVacias=true;
-			printf("NO PUEDE HABER LISTAS VACIAS Y LAS LISTAS TIENEN QUE TENER EL MISMO TAMANIO, GRACIAS\n");
-			system("pause");}
 
-		*/
 
 		}while(!salida02);
 
