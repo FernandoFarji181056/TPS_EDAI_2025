@@ -48,15 +48,18 @@ void submenu(int opcion){
 
         // Ejecuta el ejercicio correspondiente
         switch (opcion) {
-           /* case 1:
+            case 0:
 
-            printf("Elegiste la opcion 1\n");   
+            printf("Elegiste la opcion 0\n");   
                  system("pause");
+                 exit(0);
              
              break;
-                */
+               
              case 2:
-             printf("Elegiste la opcion 2\n");   
+             printf("Elegiste la opcion 2\n");
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
+             system("pause");
              //ejecutar_TP2_EJ02();
 
              return ;       
@@ -67,29 +70,33 @@ void submenu(int opcion){
              printf("Elegiste la opcion 3\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             ejecutar_TP2_EJ03_02();
+             ejecutar_TP2_EJ03();
+             //system("pause");
              break;
 
              case 4:
              printf("Elegiste la opcion 4\n");
-             //ejecutar_TP2_EJ04();
-       
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             exit(0);
+             ejecutar_TP2_EJ04();       
+             //system("pause");
+             //exit(0);
              break;
 
              case 5:
              printf("Elegiste la opcion 5\n");
-             //ejecutar_TP2_EJ05();
-             
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
+             system("pause");
+             //ejecutar_TP2_EJ05();             
              system("pause");
              break;
 
              case 6:
              printf("Elegiste la opcion 6\n");
-             //ejecutar_TP2_EJ06();
-
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
+             //ejecutar_TP2_EJ06();
+             system("pause");   
              break;
                   
 

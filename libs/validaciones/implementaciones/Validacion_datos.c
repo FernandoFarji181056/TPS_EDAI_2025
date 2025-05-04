@@ -3,9 +3,24 @@
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
-
-
 #include "libs/validaciones/headers/Validacion_datos.h"
+
+//#include "Validacion_datos.h"  // Incluir su propio header
+
+#ifdef _WIN32
+    #define CLEAR_COMMAND "cls"
+#else
+    #define CLEAR_COMMAND "clear"
+#endif
+
+void clearScreen() {
+    system(CLEAR_COMMAND);
+}
+
+
+
+
+
 /*
     La funcion devuelve un booleano para validar si el string ingresado es un numero int valido o no
     Se compara con el codigo ASCII del 48 al 57 que son los numeros del 0 al 9
@@ -170,3 +185,4 @@ char* invertirString(char* cadena)
     return cadena_invertida;
     
 }
+

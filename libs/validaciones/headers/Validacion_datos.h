@@ -15,6 +15,7 @@ bool validarLetras(char* cadena);
 char* pasarAMayuscula(char* cadena);
 char* sacarEspacios(char* input);
 char* invertirString(char* cadena);
+void clearScreen();
 
 #endif
 

@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-
+/*
 #ifdef _WIN32
     #define CLEAR_COMMAND "cls"
 #else
     #define CLEAR_COMMAND "clear"
 #endif
-
+*/
 
 
 #include "libs/listas/headers/listas.h"
@@ -16,17 +16,16 @@
 #include "libs/listas/headers/Tp_2_listas.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 #include "libs/validaciones/headers/Validacion_datos.h"
-
-
-
- /*
+/*
 void clearScreen() {
 	system(CLEAR_COMMAND);
  }
 */
 
-void ejecutar_TP2_EJ03()
+void ejecutar_TP2_EJ04()
 {	
+		
+	printf ("SOY EL EJERCICIO 4 DE LISTAS,\n\n");
 
 
         clearScreen();
@@ -155,6 +154,22 @@ void ejecutar_TP2_EJ03()
 			system("pause");}
 
 			else {
+
+				int resultado= CompararListas(L,L2);
+
+				printf("el resultado devuelto es %d\n", resultado);
+				
+				if ( resultado == 1 ){
+					printf("La primer lista es mayor que la segunda\n");
+				}
+				else if ( resultado == 2 ){
+					printf("La segunda lista es mayor que la primera\n");
+				}
+				else if ( resultado== 0 ){
+					printf("ambas listas son iguales\n");
+				}
+
+				/*
 				printf("ahora comparamos las listas\n");
 				ResultadosMul resultado = multiplo(L, L2);
 
@@ -170,7 +185,7 @@ void ejecutar_TP2_EJ03()
 					//printf("El escalar es: %d", resultado.numEscalar);
 				} else {
 					printf("No es escalar.\n");
-				}
+				}*/
 
 			}
 
