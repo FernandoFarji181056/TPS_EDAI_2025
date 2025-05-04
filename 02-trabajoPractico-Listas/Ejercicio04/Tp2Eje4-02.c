@@ -157,16 +157,15 @@ void ejecutar_TP2_EJ04()
 
 				int resultado= CompararListas(L,L2);
 
-				printf("el resultado devuelto es %d\n", resultado);
 				
 				if ( resultado == 1 ){
-					printf("La primer lista es mayor que la segunda\n");
+					printf("LA PRIMERA LISTA ES MAYOR QUE LA SEGUNDA\n\n");
 				}
 				else if ( resultado == 2 ){
-					printf("La segunda lista es mayor que la primera\n");
+					printf("LA SEGUNDA LISTA EL MAYOR QUE LA PRIMERA\n\n");
 				}
 				else if ( resultado== 0 ){
-					printf("ambas listas son iguales\n");
+					printf("AMBAS LISTAS SON IGUALES\n\n");
 				}
 
 				/*
