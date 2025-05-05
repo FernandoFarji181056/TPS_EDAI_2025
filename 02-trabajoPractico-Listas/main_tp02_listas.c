@@ -93,7 +93,7 @@ void submenu(int opcion){
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
              ejecutar_TP2_EJ06();
-             system("pause");   
+             //system("pause");   
              break;
                   
 
