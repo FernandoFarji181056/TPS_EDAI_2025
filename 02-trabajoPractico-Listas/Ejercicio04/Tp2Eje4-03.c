@@ -39,8 +39,7 @@ int CompararListas(Lista l1, Lista l2){
             acumuladoLista2++;
         }
         }
-        //printf("acumuladoLista1: %d \n",acumuladoLista1);
-        //printf("acumuladoLista2: %d \n",acumuladoLista2);
+
 
         if (acumuladoLista1>acumuladoLista2){
           

@@ -158,7 +158,7 @@ void ejecutar_TP2_EJ04()
 					printf("AMBAS LISTAS SON IGUALES\n\n");
 				}
 
-				
+				printf("LA COMPLEJIDAD ALGORITMICA ES: O(n) Lineal \n\n");
 
 
 			}
