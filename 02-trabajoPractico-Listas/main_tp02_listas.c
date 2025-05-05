@@ -71,7 +71,6 @@ void submenu(int opcion){
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
              ejecutar_TP2_EJ03();
-             //system("pause");
              break;
 
              case 4:
@@ -79,8 +78,6 @@ void submenu(int opcion){
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
              ejecutar_TP2_EJ04();       
-             //system("pause");
-             //exit(0);
              break;
 
              case 5:
@@ -95,7 +92,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 6\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             //ejecutar_TP2_EJ06();
+             ejecutar_TP2_EJ06();
              system("pause");   
              break;
                   

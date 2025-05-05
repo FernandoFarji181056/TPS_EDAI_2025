@@ -2,13 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-/*
-#ifdef _WIN32
-    #define CLEAR_COMMAND "cls"
-#else
-    #define CLEAR_COMMAND "clear"
-#endif
-*/
+
 
 
 #include "libs/listas/headers/listas.h"
@@ -16,11 +10,7 @@
 #include "libs/listas/headers/Tp_2_listas.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 #include "libs/validaciones/headers/Validacion_datos.h"
-/*
-void clearScreen() {
-	system(CLEAR_COMMAND);
- }
-*/
+
 
 void ejecutar_TP2_EJ04()
 {	
@@ -32,7 +22,7 @@ void ejecutar_TP2_EJ04()
   
 		bool salida01=false;
 		bool salida02=false;
-		//int validacion1=0;
+
 		bool validacion1=false;
 		bool validacion2=false;
 		bool listasVacias=false;
@@ -40,7 +30,7 @@ void ejecutar_TP2_EJ04()
 		int entero2;
 		char string1[1000];
 		char string2[1000];
-		//int longitud01;
+
 
 		int i=0;
 		TipoElemento X;
@@ -50,8 +40,8 @@ void ejecutar_TP2_EJ04()
 		L =l_crear();
 		L2 =l_crear();
 		printf ("AHORA CARGAREMOS 2 LISTAS CON NUMEROS ENTEROS COMPRENDIDOS ENTRE 1 Y 1000,\n");
-		printf ("LAS LISTA TIENEN QUE TENER EL MISMO TAMANIO Y NO PUEDE ESTAR VACIAS,\n");
-		printf ("LUEGO SE INFORMARA SI LA SEGUNDA LISTA ES MULTIPLO DE LA PRIMERA Y SI ADEMAS ES ESCALAR,\n\n");
+		printf ("LAS LISTAS TIENEN QUE TENER EL MISMO TAMANIO Y NO PUEDEN ESTAR VACIAS,\n");
+		printf ("LUEGO SE INFORMARA CUAL LISTA ES MAYOR O SI SON IGUALES,\n\n");
 		printf ("INTRODUZCA NUMEROS ENTEROS PARA CREAR UNA LISTA (SOLO NUMEROS, sin espacio ni otro caracter),\n");
         printf("INGRESE 'x' SALIR\n");
 
@@ -168,23 +158,8 @@ void ejecutar_TP2_EJ04()
 					printf("AMBAS LISTAS SON IGUALES\n\n");
 				}
 
-				/*
-				printf("ahora comparamos las listas\n");
-				ResultadosMul resultado = multiplo(L, L2);
+				
 
-				if (resultado.esMultiplo) {
-					printf("La segunda lista ES multiplo de la primera.\n");
-				} else {
-					printf("La segunda lista NO es multiplo de la primera.\n");
-				}
-			
-				// Verificación de escalar
-				if (resultado.escalar) {
-					printf("Ademas, ES escalar. El numero escalar es: %d\n", resultado.numEscalar);
-					//printf("El escalar es: %d", resultado.numEscalar);
-				} else {
-					printf("No es escalar.\n");
-				}*/
 
 			}
 
