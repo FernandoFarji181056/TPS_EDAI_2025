@@ -2,7 +2,8 @@
 #define PILAS_H
 
 #include <stdbool.h>
-#include "tipo_elemento.h"
+#include "libs/tipoElemento/headers/tipo_elemento.h"
+//#include "tipo_elemento.h"
 
 struct PilaRep;
 typedef struct PilaRep *Pila;

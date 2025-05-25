@@ -4,20 +4,16 @@
 #include <stdbool.h>
 #include <ctype.h>
 #include "libs/validaciones/headers/Validacion_datos.h"
-#include "libs/listas/headers/main_tp2.h"
-#include "libs/listas/headers/listas.h"
-#include "libs/listas/headers/Tp_2_listas.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 
 
-
 /*
-#include "tp_1_recursividad.h" 
-#include "libs/validaciones/headers/Validacion_datos.h"
-#include "libs/validaciones/headers/tp01_EJ_04.h"
-#include "libs/validaciones/headers/tp1_ejercicio7.h"
-#include "libs/validaciones/headers/tp01-ej-08.h"
+#include "libs/listas/headers/main_tp3.h"
+#include "libs/listas/headers/listas.h"
+#include "libs/listas/headers/Tp_2_listas.h"
 */
+
+
 
 
 void limpiarBuffer() {
@@ -60,7 +56,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 2\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             ejecutar_TP2_EJ02();
+             //ejecutar_TP3_EJ02();
 
              return ;       
              system("pause");
@@ -70,21 +66,21 @@ void submenu(int opcion){
              printf("Elegiste la opcion 3\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             ejecutar_TP2_EJ03();
+             //ejecutar_TP3_EJ03();
              break;
 
              case 4:
              printf("Elegiste la opcion 4\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             ejecutar_TP2_EJ04();       
+             //ejecutar_TP3_EJ04();       
              break;
 
              case 5:
              printf("Elegiste la opcion 5\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             ejecutar_TP2_EJ05();             
+             //ejecutar_TP3_EJ05();             
              system("pause");
              break;
 
@@ -92,7 +88,23 @@ void submenu(int opcion){
              printf("Elegiste la opcion 6\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             ejecutar_TP2_EJ06();
+             //ejecutar_TP3_EJ06();
+             //system("pause");   
+             break;
+
+             case 7:
+             printf("Elegiste la opcion 7\n");
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
+             system("pause");
+             //ejecutar_TP3_EJ07();
+             //system("pause");   
+             break;
+
+             case 8:
+             printf("Elegiste la opcion 8\n");
+             printf("Presiona ENTER para ir al ejercicio elegido\n");
+             system("pause");
+             //ejecutar_TP3_EJ08();
              //system("pause");   
              break;
                   

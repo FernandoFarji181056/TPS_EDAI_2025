@@ -12,7 +12,7 @@
 
 
 #include "libs/listas/headers/listas.h"
-#include "libs/listas/headers/main_tp3.h"
+//#include "libs/listas/headers/main_tp3.h"
 #include "libs/listas/headers/Tp_2_listas.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 #include "libs/validaciones/headers/Validacion_datos.h"
