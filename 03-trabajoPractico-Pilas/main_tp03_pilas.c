@@ -5,14 +5,7 @@
 #include <ctype.h>
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/tipoElemento/headers/tipo_elemento.h"
-
-
-/*
-#include "libs/listas/headers/main_tp3.h"
-#include "libs/listas/headers/listas.h"
-#include "libs/listas/headers/Tp_2_listas.h"
-*/
-
+#include "libs/pilas/headers/main_tp3.h"
 
 
 
@@ -27,13 +20,15 @@ void menu(){
 	int i;
 	//system("cls");
 
-	printf("--------TP02 Listas--------\n");
+	printf("--------TP03 Pilas--------\n");
     printf("\n");
     printf("Ejercicio 2: \n");
-    printf("Ejercicio 3: Multiplo\n");
-    printf("Ejercicio 4: Comparacion\n");
-    printf("Ejercicio 5: Polinomio\n");
-    printf("Ejercicio 6: Sublista\n");
+    printf("Ejercicio 3: \n");
+    printf("Ejercicio 4: \n");
+    printf("Ejercicio 5: \n");
+    printf("Ejercicio 6: \n");
+    printf("Ejercicio 7: \n");
+    printf("Ejercicio 8: \n");
     printf("O Ingrese cero para salir\n");
     printf("\n");
 
@@ -80,7 +75,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 5\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             //ejecutar_TP3_EJ05();             
+             ejecutar_TP3_EJ05();             
              system("pause");
              break;
 
@@ -125,7 +120,7 @@ int main(){
     char ingreso[1000];
 
     menu();
-    printf("Ingrese un numero del 2 al 6\n");
+    printf("Ingrese un numero del 2 al 8\n");
     fgets(ingreso, 1000, stdin);            	
     int longitud = strlen(ingreso);             
     ingreso[longitud-1]='\0'; //quita el espacio que pone fgets al final del string
