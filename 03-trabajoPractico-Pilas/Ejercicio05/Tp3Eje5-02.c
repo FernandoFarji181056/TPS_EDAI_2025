@@ -6,6 +6,7 @@
 #include "libs/tipoElemento/headers/tipo_elemento.h"
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/pilas/headers/pilas.h"
+#include "libs/pilas/headers/tp_pilas.h"
 
 
 
@@ -68,21 +69,25 @@ de la solución.
                         //system("pause");
                     }
 
-		        	 }
-                     //p_mostrar(p); 
-                    
-                     //system("pause");
-                        
+		        	 }                       
 
 
 
         }
-        //else {printf("NO es un entero valido\n");}
+
         clearScreen();
    }while(!salida01);
 
 
     p_mostrar(p); 
     printf("\n");
+
+ p_invertida = p_ej5_invertir(p);
+
+printf("\nPila original:\n");
+p_mostrar(p);
+
+printf("\nPila invertida:\n");
+p_mostrar(p_invertida);
                     
  }
