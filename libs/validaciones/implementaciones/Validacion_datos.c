@@ -186,3 +186,32 @@ char* invertirString(char* cadena)
     
 }
 
+int ingresaEnteroTeclado(bool *x){
+    char string1[1000];
+    int entero;
+    bool correcto = false;
+
+    do{ //Se repite hasta que el ingreso sea correcto
+
+        fgets(string1,1000,stdin); // pide por pantalla el ingreso
+        int longitud1 = strlen(string1);
+        string1[longitud1-1]='\0'; // quita el caracter \n que fgets agrega al final de string
+
+        if (  (string1[0] == 'X' || string1[0] == 'x') && strlen(string1)==1   ){ //se ingresó una x, se considera valido
+            *x = true;
+            entero = 0;
+            correcto = true;
+        } else {
+            //valido si es un entero lo que se ingresó
+            if (validarEntero(string1)){
+                *x = false;
+                entero = (int) strtol(string1,NULL,10); //pasa string a entero
+                correcto = true;
+            } else printf("Ingreso incorrecto, intente nuevamente\n");
+        }
+
+    } while (!correcto);
+    
+    return entero;
+}
+
