@@ -68,7 +68,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 4\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             //ejecutar_TP3_EJ04();       
+             ejecutar_TP3_EJ04();       
              break;
 
              case 5:
