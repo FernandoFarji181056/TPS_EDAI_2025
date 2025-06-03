@@ -90,8 +90,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 7\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             //ejecutar_TP3_EJ07();
-             //system("pause");   
+             ejecutar_TP3_EJ07(); 
              break;
 
              case 8:

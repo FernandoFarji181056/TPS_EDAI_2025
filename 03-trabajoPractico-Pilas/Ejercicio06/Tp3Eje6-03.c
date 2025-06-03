@@ -25,7 +25,6 @@ Pila p_ej6_eliminarclave_iterativo(Pila p, int clave){
     while (!p_es_vacia(p)){
         te = p_desapilar(p);
         p_apilar(Paux, te);
-
     }
 
     // recorro la pila auxiliar y restauro p, en resultado apilo los valores que correspondan
