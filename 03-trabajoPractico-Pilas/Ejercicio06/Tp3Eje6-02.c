@@ -6,6 +6,7 @@
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/pilas/headers/pilas.h"
 #include "libs/pilas/headers/tp_pilas.h"
+#include "libs/pilas/headers/main_tp3.h"
 
 /**
 6.	Dada una pila con valores al azar eliminar todas las ocurrencias de un determinado ítem sin perder la pila original.

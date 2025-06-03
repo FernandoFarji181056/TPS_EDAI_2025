@@ -6,6 +6,7 @@
 #include "libs/validaciones/headers/Validacion_datos.h"
 #include "libs/pilas/headers/pilas.h"
 #include "libs/pilas/headers/tp_pilas.h"
+#include "libs/pilas/headers/main_tp3.h"
 
 /*
 7. Dada dos pilas realizar una función que permita determinar los elementos que tienen

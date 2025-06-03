@@ -97,8 +97,7 @@ void submenu(int opcion){
              printf("Elegiste la opcion 8\n");
              printf("Presiona ENTER para ir al ejercicio elegido\n");
              system("pause");
-             //ejecutar_TP3_EJ08();
-             //system("pause");   
+             ejecutar_TP3_EJ08();
              break;
                   
 
