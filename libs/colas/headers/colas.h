@@ -2,7 +2,7 @@
 #define COLAS_H
 
 #include <stdbool.h>
-#include "D:\Mario\Prog_2_2009\2024\TADs\Tipos\tipo_elemento.h"
+#include "libs/tipoElemento/headers/tipo_elemento.h"
 
 struct ColaRep;
 typedef struct ColaRep *Cola;
