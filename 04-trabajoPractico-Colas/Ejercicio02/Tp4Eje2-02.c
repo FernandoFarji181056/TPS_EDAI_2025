@@ -62,7 +62,7 @@ bool cargarColaAutomatica(Cola C1) {
 
 void ejecutar_TP4_EJ02(){
     
-    int entero1, entero2;
+    int entero1;
     int opcion = 0;
     bool x = false;
     Cola C1 = c_crear();

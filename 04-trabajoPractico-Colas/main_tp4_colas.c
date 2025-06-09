@@ -50,14 +50,14 @@ void main(){
             printf("Elegiste la opcion 3\n");
             printf("Presiona ENTER para ir al ejercicio elegido\n");
             system("pause");
-            //ejecutar_TP4_EJ03();
+            ejecutar_TP4_EJ03();
             system("pause");
             break;
         case 4:
             printf("Elegiste la opcion 4\n");
             printf("Presiona ENTER para ir al ejercicio elegido\n");
             system("pause");
-            //ejecutar_TP4_EJ04();
+            ejecutar_TP4_EJ04();
             system("pause");
             break;
         case 5:
