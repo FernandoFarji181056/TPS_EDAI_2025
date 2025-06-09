@@ -29,11 +29,11 @@ void main(){
         printf("Ejercicio 4: \n");
         printf("Ejercicio 5: \n");
         printf("Ejercicio 6: \n");
-        printf("O Ingrese X para salir\n");
+        printf("Ingrese el ejercicio deseado o X para salir\n");
         printf("\n");
 
         opcion = ingresaEnteroTeclado(&x);
-        while ((opcion < 2 || opcion > 7) && !x){
+        while ((opcion < 2 || opcion > 6) && !x){
             printf("Ingreso invalido, intente nuevamente\n");
             opcion = ingresaEnteroTeclado(&x);
         }
@@ -43,7 +43,7 @@ void main(){
             printf("Elegiste la opcion 2\n");
             printf("Presiona ENTER para ir al ejercicio elegido\n");
             system("pause");
-            //ejecutar_TP4_EJ02();
+            ejecutar_TP4_EJ02();
             system("pause");
             break;
         case 3:
