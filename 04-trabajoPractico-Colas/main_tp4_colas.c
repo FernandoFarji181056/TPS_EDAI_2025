@@ -64,7 +64,7 @@ void main(){
             printf("Elegiste la opcion 5\n");
             printf("Presiona ENTER para ir al ejercicio elegido\n");
             system("pause");
-            //ejecutar_TP4_EJ05();
+            ejecutar_TP4_EJ05();
             system("pause");
             break;
         case 6:
