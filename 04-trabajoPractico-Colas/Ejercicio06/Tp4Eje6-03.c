@@ -16,7 +16,7 @@
 // retornar una lista con los valores comunes segun las especificaciones del ejercicio.
 // Si no existen valores comunes retornar la lista vacia.
 Lista c_ej6_comunesapilaycola(Pila p, Cola c){
-	int cantidad;
+	int cantidad = 0;
 	TipoElemento te, tep, tec;
 	Cola Caux = c_crear();
 	Pila paux = p_crear();
@@ -37,7 +37,7 @@ Lista c_ej6_comunesapilaycola(Pila p, Cola c){
 	while (!p_es_vacia(p)){
 		tep = p_desapilar(p);
 		//busco si el elemento se encuentra en la cola
-		for (int i = 0; i < cantidad; i++){
+		for (int i = 1; i <= cantidad; i++){
 			tec = c_desencolar(c);
 			if (tep->clave == tec->clave){
 				char* valor = malloc(12 * sizeof(char));

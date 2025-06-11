@@ -26,7 +26,7 @@ void l_mostrar_con_void(Lista lista){
     TipoElemento te;
     while (hay_siguiente(ite)){
         te = siguiente(ite);
-        printf("%d:%s ", te->clave, *(char*)te->valor);
+        printf("%d:%s ", te->clave, (char*)te->valor);
     }
     printf("\n");
 }
@@ -101,7 +101,11 @@ void ejecutar_TP4_EJ06(){
     L1 = c_ej6_comunesapilaycola(P1, C1);
     l_mostrar_con_void(L1);
     printf("\n");
-    printf("La complejidad del algoritmica de esta implementacion es de O(n^2) donde n es la cantidad de elementos de las colas, esto porque por cada elemento se recorre toda la cola nuevamente\n");
+    printf("La complejidad del algoritmica de esta implementacion es de O(n^2) porque se recorre la pila y por cada elemento debemos recorrer la cola\n");
+    printf("\n");
+    p_mostrar(P1);
+    printf("\n");
+    c_mostrar(C1);
     system("pause");
 
 }
