@@ -71,7 +71,7 @@ void main(){
             printf("Elegiste la opcion 6\n");
             printf("Presiona ENTER para ir al ejercicio elegido\n");
             system("pause");
-            //ejecutar_TP4_EJ06();
+            ejecutar_TP4_EJ06();
             system("pause");
             break;
         default:
