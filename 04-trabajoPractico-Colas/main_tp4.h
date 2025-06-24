@@ -1,6 +1,6 @@
 #include "libs/colas/headers/colas.h"
-#ifndef MAIN_TP3_H
-#define MAIN_TP3_H
+#ifndef MAIN_TP4_H
+#define MAIN_TP4_H
 
 void ejecutar_TP4_EJ02();
 void ejecutar_TP4_EJ03();
